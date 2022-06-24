@@ -6,6 +6,6 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TopJobs';
+  title = 'BookHive';
   fauser = faUser;
 }

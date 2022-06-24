@@ -1,0 +1,40 @@
+<div><table class="table table-striped">
+    <thead>
+        <tr>
+            <th>BookName</th>
+            <th>BookId</th>
+            <th>Gerner</th>
+            <th>Language</th>
+            <th>Price</th>
+            <th>Photo</th>
+            <th>Options</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of bookslist">
+            <td>{{dataItem.BookName}}</td>
+            <td>{{dataItem.BookId}}</td>
+            <td>{{dataItem.Gerner}}</td>
+            <td>{{dataItem.Language}}</td>
+            <td>{{dataItem.Price}}</td>
+            <td>{{dataItem.Photo}}</td>
+            <td>
+                <button type="button" class="btn btn-light mr-1" routerLink="/Addedit">
+                   Add
+                </button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-light mr-1">
+                    Edit
+                </button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-light mr-1">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table></div>
+<a mat-raised-button class="log" color="primary" routerLink="/Admin" >Back</a>

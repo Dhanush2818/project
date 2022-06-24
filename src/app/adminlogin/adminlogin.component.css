@@ -95,7 +95,7 @@ form{
     outline: none;
     border: none;
     border-radius: 48px;
-    background-color: #129106;
+    background-color: #061491;
     color: white;
     text-transform: uppercase;
     font-weight: 600;
@@ -105,7 +105,7 @@ form{
 
 
 .btn:hover{
-    background-color: #41fa41;
+    background-color: #4741FA;
 
 }
 
@@ -137,7 +137,7 @@ form{
 }
 
 .social-icon:hover{
-    color: #47fa41;
+    color: #4741FA;
     border-color: black;
 }
 
@@ -176,7 +176,7 @@ margin: auto;
 
 .icon-facebook4:before {
     content: "\eb15";
-    color: #18f24e;
+    color: #18f261;
   }
 
   

@@ -10,12 +10,31 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-
-
+import { HomeComponent } from './home/home.component';
+import { AdminComponent } from './admin/admin.component';
+import { UserComponent } from './user/user.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { ContactpageComponent } from './contactpage/contactpage.component';
+import { ViewBooksComponent } from './viewbooks/view-books.component';
+import { SearchBooksComponent } from './search-books/search-books.component';
+import { ModifybooksComponent } from './modifybooks/modifybooks.component';
+import { SharedService } from './shared.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { AddeditbooksComponent } from './addeditbooks/addeditbooks.component';
 @NgModule({
   declarations: [
     AppComponent,
-    routingcomponents
+    routingcomponents,
+    HomeComponent,
+    AdminComponent,
+    UserComponent,
+    AdminloginComponent,
+    ContactpageComponent,
+    ViewBooksComponent,
+    SearchBooksComponent,
+    ModifybooksComponent,
+    AddeditbooksComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +43,12 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
