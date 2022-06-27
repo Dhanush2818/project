@@ -8,7 +8,7 @@ import { SharedService } from '../shared.service';
 export class ModifybooksComponent implements OnInit {
 
   constructor(private service:SharedService) { }
-  bookslist:any=[];
+  Booklist:any=[];
   
   
  
@@ -20,7 +20,7 @@ export class ModifybooksComponent implements OnInit {
   
  refreshBookList(){
   this.service.getbooks().subscribe(data=>{
-      this.bookslist=data;
+      this.Booklist=data;
   });
 }
 }

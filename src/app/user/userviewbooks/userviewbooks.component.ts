@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedService } from '../shared.service';
+import { SharedService } from 'src/app/shared.service';
 @Component({
-  selector: 'app-view-books',
-  templateUrl: './view-books.component.html',
-  styleUrls: ['./view-books.component.css']
+  selector: 'app-userviewbooks',
+  templateUrl: './userviewbooks.component.html',
+  styleUrls: ['./userviewbooks.component.css']
 })
-export class ViewBooksComponent implements OnInit {
+export class UserviewbooksComponent implements OnInit {
 
   constructor(private services:SharedService) { }
+
   Booklist:any=[];
   ModalTitle:string | undefined;
   ActivateAddEditEmpComp:boolean=false;

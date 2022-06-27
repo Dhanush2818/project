@@ -1,0 +1,28 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            
+            <th>UserEmail</th>
+            <th>UserId</th>
+            <th>BookName</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>TotalBill</th>
+           
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of Orderlist">
+            <td>{{dataItem.UserEmail}}</td>
+            <td>{{dataItem.UserId}}</td>
+            <td>{{dataItem.BookName}}</td>
+            <td>{{dataItem.Price}}</td>
+            <td>{{dataItem.Quantity}}</td> 
+            <td>{{dataItem.TotalBill}}</td>
+        </tr>
+    </tbody>
+</table>
+<div>
+<a mat-raised-button class="log" color="primary" routerLink="/Admin" >Back</a>
+</div>

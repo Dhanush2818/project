@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedService } from '../shared.service';
+import { SharedService } from 'src/app/shared.service';
 @Component({
-  selector: 'app-search-books',
-  templateUrl: './search-books.component.html',
-  styleUrls: ['./search-books.component.css']
+  selector: 'app-usersearchbooks',
+  templateUrl: './usersearchbooks.component.html',
+  styleUrls: ['./usersearchbooks.component.css']
 })
-export class SearchBooksComponent implements OnInit {
+export class UsersearchbooksComponent implements OnInit {
+
   constructor(private services:SharedService) { }
+
   Booklist:any=[];
   ModalTitle:string | undefined;
   ActivateAddEditEmpComp:boolean=false;
@@ -33,4 +35,5 @@ export class SearchBooksComponent implements OnInit {
       )
   });
   }
+
 }

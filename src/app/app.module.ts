@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule, routingcomponents } from './app-routing.module';
 import {MatToolbarModule,} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { AppComponent } from './app.component';
 import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './home/home.component';
@@ -22,6 +23,15 @@ import { SharedService } from './shared.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AddeditbooksComponent } from './addeditbooks/addeditbooks.component';
+import { ShowbooksComponent } from './modifybooks/showbooks/showbooks.component';
+import { AddeditbookComponent } from './modifybooks/addeditbook/addeditbook.component';
+import { AdduserComponent } from './signup/signup/adduser/adduser.component';
+import { ShowuserComponent } from './admin/showuser/showuser.component';
+import { ShowordersComponent } from './admin/showorders/showorders.component';
+import { UserviewbooksComponent } from './user/userviewbooks/userviewbooks.component';
+import { UsersearchbooksComponent } from './user/usersearchbooks/usersearchbooks.component';
+import { UsercartComponent } from './user/usercart/usercart.component';
+import { UserprofileComponent } from './user/userprofile/userprofile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,9 +44,21 @@ import { AddeditbooksComponent } from './addeditbooks/addeditbooks.component';
     ViewBooksComponent,
     SearchBooksComponent,
     ModifybooksComponent,
-    AddeditbooksComponent
+    AddeditbooksComponent,
+    ShowbooksComponent,
+    AddeditbookComponent,
+    AdduserComponent,
+    ShowuserComponent,
+    ShowordersComponent,
+    UserviewbooksComponent,
+    UsersearchbooksComponent,
+    UsercartComponent,
+    UserprofileComponent,
+    
+    
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -46,9 +68,12 @@ import { AddeditbooksComponent } from './addeditbooks/addeditbooks.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [SharedService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

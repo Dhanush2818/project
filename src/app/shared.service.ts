@@ -19,10 +19,33 @@ export class SharedService {
     return this.http.put(this.APIUrl+'/BookDetails',val);
   }
   deletebooks(val:any){
-    return this.http.delete(this.APIUrl+'/BookDetails',val);
+    return this.http.delete(this.APIUrl+'/BookDetails'+'/'+val);
   }
   UploadPhoto(val:any){
     return this.http.post(this.APIUrl+'/BookDetails/SaveFile',val);
   }
-
+  adduser(val:any){
+    return this.http.post(this.APIUrl+'/UserDetails',val);
+  }
+  updateuser(val:any){
+    return this.http.put(this.APIUrl+'/UserDetails',val);
+  }
+  getuser():Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/UserDetails');
+  }
+  deleteuser(val:any){
+    return this.http.delete(this.APIUrl+'/UserDetails',val);
+  }
+  addorder(val:any){
+    return this.http.post(this.APIUrl+'/Cart',val);
+  }
+  updateorder(val:any){
+    return this.http.put(this.APIUrl+'/Cart',val);
+  }
+  getorder():Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/Cart');
+  }
+  deleteorder(val:any){
+    return this.http.delete(this.APIUrl+'/Cart',val);
+  }
 }

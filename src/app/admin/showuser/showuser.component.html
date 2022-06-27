@@ -1,0 +1,25 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>UserName</th>
+            <th>UserEmail</th>
+            <th>Contact</th>
+            <th>Address</th>
+            <th>UserId</th>
+           
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of Userlist">
+            <td>{{dataItem.UserName}}</td>
+            <td>{{dataItem.UserEmail}}</td>
+            <td>{{dataItem.Contact}}</td>
+            <td>{{dataItem.Address}}</td>
+            <td>{{dataItem.UserId}}</td> 
+        </tr>
+    </tbody>
+</table>
+<div>
+<a mat-raised-button class="log" color="primary" routerLink="/Admin" >Back</a>
+</div>

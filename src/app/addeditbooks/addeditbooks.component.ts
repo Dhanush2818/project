@@ -8,8 +8,8 @@ import { SharedService } from '../shared.service';
 export class AddeditbooksComponent implements OnInit {
 
   constructor(private service:SharedService) { }
-  @Input() bd:any;
-  BookName:string;
+  
+  
   ngOnInit(): void {
   }
 

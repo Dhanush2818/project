@@ -1,0 +1,46 @@
+<div class="d-flex flex-row bd-highlight mb-5">
+
+    <div class="form-froup row" style="width: 60%;">
+        <label class="col-sm-2 col-form-label">BookName</label>
+        <div class="col-sm-10">
+         <input type="text" class="form-control" [(ngModel)]="BookName"
+            placeholder="Enter BookName">
+        </div>
+        <label class="col-sm-2 col-form-label">BookId</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="BookId"
+            placeholder="Enter BookId">
+
+        </div>
+        <div class="col-sm-10">
+            <label class="col-sm-2 col-form-label">Gerner</label>
+        <input type="text" class="form-control" [(ngModel)]="Gerner"
+        placeholder="Enter Gerner">
+    </div>
+
+
+        <div class="col-sm-10">
+            <label class="col-sm-2 col-form-label">Language</label>
+        <input type="text" class="form-control" [(ngModel)]="Language"
+        placeholder="Enter Language">
+    </div>
+
+        <div class="col-sm-10">
+            <label class="col-sm-2 col-form-label">Price</label>
+
+        <input type="text" class="form-control" [(ngModel)]="Price"
+        placeholder="Enter Price">
+    </div>
+</div>
+<div class="ml-3 bd-highlight" style="width: 40%;">
+    <img [src]=PhotoFilePath height="250px;" width="200px;">
+    <input type="file" onchange="uploadedPhoto($event)" class="mt-2"/>
+</div>
+</div>
+<button (click)="addBookList()"  class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateBook()"  class="btn btn-primary">
+    Update
+</button>

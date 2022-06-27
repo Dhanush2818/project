@@ -1,0 +1,62 @@
+<h2>User_Registration</h2>
+                    <div class="d-flex flex-row bd-highlight mb-5">
+                    <div class="form-froup row" style="width: 60%;">
+       
+        <div class="input-field">
+            <span class="material-icons">
+                person
+                </span>
+         <input type="text" class="form-control" [(ngModel)]="UserName" placeholder="Username">
+         
+        </div>
+        
+        <div class="input-field">
+            <span class="material-icons">
+                email
+                </span>
+            <input type="text" class="form-control" [(ngModel)]="UserEmail" placeholder="Email" >
+            
+           
+        </div>
+        <div class="input-field">
+           
+            <span class="material-icons">
+                phone
+                </span>
+        <input type="text" class="form-control" [(ngModel)]="Contact" placeholder="contact">
+    </div>
+
+
+        <div class="input-field">
+            
+            <span class="material-icons">
+                home
+                </span>
+        <input type="text" class="form-control" [(ngModel)]="Address" placeholder="Address">
+    </div>
+
+        <div class="input-field">
+            
+            <span class="material-icons">
+                lock
+                </span>
+            <input type="text" class="form-control" [(ngModel)]="Password" placeholder="Password" />
+    </div>
+    <div class="input-field">
+        <span class="material-icons">
+            person
+            </span>
+        <input type="text" class="form-control" [(ngModel)]="UserId" placeholder="UserId" />
+    </div>
+
+
+</div>
+</div>
+
+<button (click)="addUserList()"  class="btn btn-primary">
+    Register
+</button>
+
+
+
+           

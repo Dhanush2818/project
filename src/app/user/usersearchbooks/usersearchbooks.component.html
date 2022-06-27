@@ -1,4 +1,4 @@
-<h2>Search For Books Based on  Required BookName and Price</h2>
+<h2>Search For Books Based on  Required BookName</h2>
 
 
 <table class="table table-striped">
@@ -16,6 +16,7 @@
             <th>
                
                 Price</th>
+                <th>Options</th>
         </tr>
 
     </thead>
@@ -26,7 +27,17 @@
             <td>{{dataItem.Gerner}}</td>
             <td>{{dataItem.Language}}</td>
             <td>{{dataItem.Price}}</td>
+            <td>
+                
+                <button type="button" class="btn btn-light mr-1"
+                data-toggle="modal" data-target="#exampleModal"
+
+data-backdrop="static" data-keyboard="false"
+                >
+                Buy
+                </button>
+                </td>
         </tr>
     </tbody>
 </table>
-<a mat-raised-button class="log" color="primary" routerLink="" >Back</a>
+<a mat-raised-button class="log" color="primary" routerLink="/User" >Back</a>
