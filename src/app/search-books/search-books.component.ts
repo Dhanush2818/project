@@ -26,7 +26,7 @@ export class SearchBooksComponent implements OnInit {
 }
   SearchFn(){
     var BookNameSearch=this.BookNameSearch;
-    var BookPriceSearch=this.BookPriceSearch;
+    
     this.Booklist = this.BookListWithoutSearch.filter(function (el:any){
       return el.BookName.toString().toLowerCase().includes(
         BookNameSearch.toString().trim().toLowerCase()

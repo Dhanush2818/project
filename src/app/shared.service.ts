@@ -48,4 +48,11 @@ export class SharedService {
   deleteorder(val:any){
     return this.http.delete(this.APIUrl+'/Cart',val);
   }
+  getorderbyid(val:any):Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/Cart'+'/'+val);
+  }
+  getbooksbyid(val:any):Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/BookDetails'+'/'+val);
+  }
+
 }

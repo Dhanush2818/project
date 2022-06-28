@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { SharedService } from 'src/app/shared.service';
 
 @Component({
   selector: 'app-usercart',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsercartComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private services:SharedService) { }
+  Cartlist:any=[];
+  ModalTitle:string | undefined;
+  ActivateAddEditEmpComp:boolean=false;
+  @Input() bd=111;
+ 
   ngOnInit(): void {
+    this.refreshBookList();
   }
-
+  
+  refreshBookList(){
+    this.services.getorderbyid(this.bd).subscribe(data=>{
+        this.Cartlist=data;
+    });
 }
+  }
+  
+
+

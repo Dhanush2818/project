@@ -19,7 +19,7 @@ import { ShowuserComponent } from './admin/showuser/showuser.component';
 import { ShowordersComponent } from './admin/showorders/showorders.component';
 import { UserviewbooksComponent } from './user/userviewbooks/userviewbooks.component';
 import { UsersearchbooksComponent } from './user/usersearchbooks/usersearchbooks.component';
-
+import { UsercartComponent } from './user/usercart/usercart.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -40,7 +40,8 @@ const routes: Routes = [
   {path:'ShowUser',component:ShowuserComponent},
   {path:'ShowOrders',component:ShowordersComponent},
   {path:'Userbooks',component:UserviewbooksComponent},
-  {path:'Usersearch',component:UsersearchbooksComponent}
+  {path:'Usersearch',component:UsersearchbooksComponent},
+  {path:'UserCart',component:UsercartComponent}
 ];
 
 @NgModule({

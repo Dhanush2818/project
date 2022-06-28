@@ -32,6 +32,7 @@ import { UserviewbooksComponent } from './user/userviewbooks/userviewbooks.compo
 import { UsersearchbooksComponent } from './user/usersearchbooks/usersearchbooks.component';
 import { UsercartComponent } from './user/usercart/usercart.component';
 import { UserprofileComponent } from './user/userprofile/userprofile.component';
+import { DescriptionComponent } from './user/description/description.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +55,7 @@ import { UserprofileComponent } from './user/userprofile/userprofile.component';
     UsersearchbooksComponent,
     UsercartComponent,
     UserprofileComponent,
+    DescriptionComponent,
     
     
   ],

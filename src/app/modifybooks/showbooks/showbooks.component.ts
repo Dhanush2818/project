@@ -26,7 +26,7 @@ export class ShowbooksComponent implements OnInit {
             Gerner:"",
             Language:"",
             Price:0,
-            PhotoFileName:"anonymous.png"
+            Photo:""
      
     }
     this.ModalTitle="Add Book";
