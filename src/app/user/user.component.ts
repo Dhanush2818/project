@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit,Input } from '@angular/core';
+import { OrderdetailsService } from '../orderdetails.service';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:OrderdetailsService) { }
+
+  BookData:any;
+@Input() details:any;
 
   ngOnInit(): void {
+    this.BookData = this.service.BookDetails;
   }
 
 }

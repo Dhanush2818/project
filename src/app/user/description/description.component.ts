@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { SharedService } from 'src/app/shared.service';
+import { UserviewbooksComponent } from '../userviewbooks/userviewbooks.component';
 @Component({
   selector: 'app-description',
   templateUrl: './description.component.html',
@@ -7,15 +8,16 @@ import { SharedService } from 'src/app/shared.service';
 })
 export class DescriptionComponent implements OnInit {
 
-  constructor(private services:SharedService) { }
+  constructor(private services:SharedService,private componrnt:UserviewbooksComponent ) { }
   Booklist:any=[];
-  bd=222;
+  @Input() new:any;
 
   ngOnInit(): void {
     this.refreshBookList();
+    
   }
   refreshBookList(){
-    this.services.getbooksbyid(this.bd).subscribe(data=>{
+    this.services.getbooksbyid(this.new).subscribe(data=>{
         this.Booklist=data;
     });
 }

@@ -12,7 +12,7 @@ export class UsercartComponent implements OnInit {
   Cartlist:any=[];
   ModalTitle:string | undefined;
   ActivateAddEditEmpComp:boolean=false;
-  @Input() bd=111;
+  @Input() bd=222;
  
   ngOnInit(): void {
     this.refreshBookList();

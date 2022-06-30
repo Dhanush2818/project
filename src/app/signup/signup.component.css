@@ -144,3 +144,46 @@ form{
     color: grey;
 
 }
+
+.navbar-light .navbar-nav .nav-link
+{
+    color: var(--secondary-color);
+}
+.navbar-light .navbar-nav .nav-link.active-link
+{
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+nav ul .search-icon{
+    height: 30px;
+    width: 240px;
+    display: flex;
+    background: #35c02b;
+    border-radius: 5px;
+  }
+  nav ul .search-icon input{
+    height: 100%;
+    width: 200px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+  }
+  nav ul .search-icon .icon{
+    height: 100%;
+    width: 40px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  nav ul .search-icon .icon:hover{
+    background: #226dae;
+  }
+  nav ul .search-icon .icon span{
+    color: #f2eaea;
+    font-size: 18px;
+  }

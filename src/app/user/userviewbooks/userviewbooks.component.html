@@ -6,6 +6,7 @@
             <th>Gerner</th>
             <th>Language</th>
             <th>Price</th>
+            <th>BookImage</th>
             <th>Options</th>
         </tr>
 
@@ -16,9 +17,10 @@
             <td>
                 <button type="button" class="btn btn-primary  m-2" 
                 data-toggle="modal" data-target="#exampleModal"
-                (click)="addClick()"
+                (click)="addClick(dataItem.BookId)" 
                 data-backdrop="static" data-keyboard="false"
                 >
+                
                 {{dataItem.BookId}}
                   </button>
                   
@@ -35,8 +37,9 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                            <app-description [bd]="bd" >
-                            </app-description>
+                          <app-description [new]=n>
+                          </app-description>
+                            
                         </div>
                       </div>
                     </div>
@@ -50,6 +53,7 @@
             <td>{{dataItem.Gerner}}</td>
             <td>{{dataItem.Language}}</td>
             <td>{{dataItem.Price}}</td>
+            <td><img src={{dataItem.Photo}} width="100px"/></td>
             <td>
                 
                 <button type="button" class="btn btn-light mr-1"

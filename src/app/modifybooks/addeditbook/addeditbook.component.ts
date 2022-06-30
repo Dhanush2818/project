@@ -18,18 +18,17 @@ export class AddeditbookComponent implements OnInit {
             Language:string | undefined;
             Price:Int16Array | undefined;
             Photo:string | undefined;
-            PhotoFilePath:string | undefined;
+           
   
 
   BookList:any=[];
 
   ngOnInit(): void {this.BookName=this.bd.BookName;
     this.BookId=this.bd.BookId;
-    this.Gerner!=this.bd.Gerner;
-    this.Language!=this.bd.Language;
-    this.Price!=this.bd.Price;
-    this.Photo!=this.bd.Photo;
-    this.PhotoFilePath=this.services.PhotoUrl+this.Photo;
+    this.Gerner=this.bd.Gerner;
+    this.Language=this.bd.Language;
+    this.Price=this.bd.Price;
+    this.Photo=this.bd.Photo;
     
   }
   
@@ -65,17 +64,7 @@ Photo:this.Photo};
   }
 
 
-  uploadPhoto($event:any){
-    var file=$event.target.files[0];
-    const formData:FormData=new FormData();
-    formData.append('uploadedFile',file,file.name);
-    this.services.UploadPhoto(formData).subscribe((data:any)=>{
-      this.Photo=data.toString;
-      this.PhotoFilePath=this.services.PhotoUrl+this.Photo;
 
-
-    })
-  }
 
 }
 

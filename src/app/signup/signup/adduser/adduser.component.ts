@@ -24,7 +24,7 @@ export class AdduserComponent implements OnInit {
               this.Address!=this.bd.Address;
               this.Password!=this.bd.Password;
               this.UserId!=this.bd.UserId;
-              this.refreshBookList();
+             
               
             }
             addUserList(){
@@ -34,17 +34,12 @@ export class AdduserComponent implements OnInit {
                 Address:this.Address,
                 Password:this.Password,
                 UserId:this.UserId};
-              
+              console.log(val)
           
               this.services.adduser(val).subscribe(res=>{
                   alert(res.toString());
               });
             }
-            refreshBookList(){
-              this.services.getuser().subscribe(data=>{
-                  this.Userlist=data;
-                 
-              });
-            }
+            
 
 }

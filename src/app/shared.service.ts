@@ -54,5 +54,8 @@ export class SharedService {
   getbooksbyid(val:any):Observable<any[]>{
     return this.http.get<any>(this.APIUrl+'/BookDetails'+'/'+val);
   }
+  getuserbyemail(val:any):Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/UserDetails'+'/'+"'"+val+"'");
+  }
 
 }
