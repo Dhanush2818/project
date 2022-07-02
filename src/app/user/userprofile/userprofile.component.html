@@ -1,1 +1,33 @@
-<p>userprofile works!</p>
+<div class="d-flex flex-row bd-highlight mb-5" *ngFor="let dataItem of Detailslist">
+
+    <div class="form-froup row" style="width: 60%;">
+        <label class="col-sm-2 col-form-label">YourName</label>
+        <div class="col-sm-10">
+            {{dataItem.UserNme}}
+        </div>
+        <label class="col-sm-2 col-form-label">YourMail</label>
+        <div class="col-sm-10">
+            
+            {{dataItem.UserEmail}}
+        </div>
+        <div class="col-sm-10">
+            <label class="col-sm-2 col-form-label">YourNumber</label>
+            {{dataItem.Contact}}
+    </div>
+
+
+        <div class="col-sm-10">
+            <label class="col-sm-2 col-form-label">Language</label>
+            {{dataItem.Language}}
+        </div>
+        <div class="col-sm-10">
+            <label class="col-sm-2 col-form-label">Address</label>
+            {{dataItem.Address}}
+       
+    </div>
+
+</div>
+<div class="col-sm-10">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAhFBMVEX///8AAAAXFxfn5+cEBAT4+Pj7+/sICAgZGRkUFBTU1NT29vZBQUErKyvw8PDz8/MPDw+ampp8fHw0NDRHR0clJSV1dXXe3t5ra2vIyMgwMDBPT09WVlY6OjqEhIQfHx+Ojo5jY2OgoKCtra29vb3Ozs6xsbHi4uJUVFSTk5OmpqZmZmYUnZtNAAAGyUlEQVR4nO2d23aiMBSGiYp4QhEVaT0A1tpq3//9RkUggaCB7HRnuvJdjqs1f0nY54xlGQwGg8FgMBgMBoPBYDAYfp/ZMU4mq6FDiNNxl+H8zcZeURs+/QUp40ziNfa6mtHdryoqHizmU+zVCTNKenUybnhBF3uFQqy3z1SkWyzQ/6nYe+eljivDA/ZCX/Dpisi4sdR6f52fHo7SQzlhr7YW+/XpYNhjL7iG6a6ZDkKSPvaaeXTfm+og5FtDWz9toeOqRLtnMm68r1IS7IWXaXjOC2LslbPEbXUQcsReO81bA/tRpqORZRzX+roibLCXXxDI6CDkA3v9GSOJjXUjmmEreLCR06GNr/Imq4N4eoQn0g9Ek0eyltdBhjr4XJKvrJQLtgrL6ncghCyxZVjWEUIH6eGb9xBECMFPRkh5JwVbbB1fMDpIB1vIB5AQgp0U9qGEYHuOAGY9Bdu4t0o58MAO3j0oIcgmsQ+lg7zjCpmCCYlwhXTBhAz+ihBki2iEGCFGiBFihBghRshfEvJnnMYZmJAVrhBLsjRSsEMWMoASgl2Aa1lerxIiC2ldXy8TIwuRKLCzYJfbYZLxV7CrbzOg15aLrAPstGOfdcvawwjBPiKWNQLR4WlQDa12jrfgB1vFlTOEkDdsFVdmAHnsBbaIOwCFdg3K7Fe6Qk3kz3A1adGULr/p0pM9k/TlJ9gCcuRKuw52QZdCypmPsVdPMY3a65hoctJT2vfLDvDbaRgOLXU4Oth0hpbvYOyGBw6tDDx+dxOHFkq01NE8EeHoYtErnBo5wtEn9nrrWTeIsjbYeZOn2L6gQfHm2Et9xWgioiPRzAxyOb3s4VpqZwVrOD17Kr3t/yLjxtqvaaNdxP/DpmIYxZshKyLazr+wV9WS7nHuh8l2m4T7w1Hr163BoJxRsPLHzX6km0TBSM1q2tK/3Msk0aFB/D3e313M3UWfmH0c54ktV1TKLM4ngaKzBjWFK/05k5+L9gIWbx0wDn+kQ4B1rHhWvc3l6ahnd14t1y2w3ZZpwnVEnM2Zf4r7b/uaomOIOud6fJKY85bB4a2bHxl7fTyHuyeJ+xXiQxEphA4j9/3djQSC4F6MJGMKNgSTsW1oiGD4Er5dR5wFgo8/AmtwuuNMQj9Yer8/oDQavl6cOINz+s6yf900wurYckKV9OKbheIg5gt0X3G7BR5JcbV7bQp6zrn9NPbjkUdKXcqlch1FvUVl3QGoISilZto4z70qLPmCNc3dqLlKhLoQQ1noJVP4rFI48MdlXHwJVSYutp598SEr2QmkjqJP61ard77TvNdlR6XCnTD1JtfB9fwP4Z4P6MYq2paznoPVpR9WXGT3YJ8ejh2Ykj6sh+UL/nkKbUOgZOUcVAeJH7+2QYtnXLu2JtiwrmJuuBtcgQETf4H0/VFkU+zi4xswDcJ90FcvocZfhPfWGUQI2FUVOVm/r+iVUB5MjkKoPtiI3EMRvLkHpq8W4uImll5+1QPHgXPdatQDY0ZAvcUrnl/E6KXj7v3cl1xO5gGN74NduZGyo21bQn9CZ4bY3BmIVw+8szZMgE77JWwz2pQOf0BmymCNiDur+92DUnrLppVAHJJvUCGshaZ2bfWuLTpy8MsftgDUPWEivw/aFY2r33yiZCbSPgrUDVQpRVPNOGQSwx7vu5muo91FLv11IpBke309KfUTcU1eyenu+DK5VVgrkv1RK1EU9zRXXpgygxoJqJDst9Z+wFIpS0gIAc1m1Qpx+F9e6dGREAIb5CIKgQ0O64T8wtaSHtxhqD3s3N7TyqtfxlUBm8G/U/v65d7hVnr9RnuZcgOojoYGkXHmJye5FD2sEMZFudBnmVMSoWyxE0q7jbBCStO51J+8V0nB0U5jICsDXMiKceMv1CfDUoKBceMB+tCBhZBlbWDFpkWZwAri8kBoIWyoywxt9KhzcmJCXYgZUnAhxAkKKaUbH520zfmrlHzwIEqK8EJubdnZyjhDWj2O5YIY4FchpHgLC16ADHEPjBIhWXpHOEMDUB5RoSPf88KdRgDJBxVC8p0i7MgN5I+7CiGZnW4wZyafa1QhJNsoDaJP+e4UFUKyIvqr8kgR1HXkT7sKIfnbN/NvB7FdLU/vTtbnT/qvHYCUqQohTu4f3pT0JqlLeKDzcc4+Xfv07MLoUGNHipLgcRIUyWsq0UFFjMcYpMgOG+o+6PBjViqSgp8fVdBVSmp9jjz6VXDJHnTh7QG/vJl79QrufpkB/ccWQkrGj40MYMirrH9TyaMSrqY5cxwvYLN0D3iD1Ot7aXpnZv4MBoPBYDAYDAaDwWAwGJTxD6UiasXw2da9AAAAAElFTkSuQmCC" width="100px"/>
+</div>
+

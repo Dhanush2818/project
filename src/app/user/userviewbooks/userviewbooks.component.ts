@@ -17,15 +17,7 @@ export class UserviewbooksComponent implements OnInit {
     this.refreshBookList();
   }
   addClick(val:any){
-    this.bd={
-      BookName:"",
-            BookId:0,
-            Gerner:"",
-            Language:"",
-            Price:0,
-            Photo:""
-     
-    }
+    
     this.ModalTitle="BookDescription"
   this.n=val
   }

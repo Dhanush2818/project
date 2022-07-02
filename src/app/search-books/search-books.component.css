@@ -1,3 +1,13 @@
 .space{
     flex: 1 1 auto;
 }
+.body {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-63gotWdlshNxikB-hbzBE4ulz-TVS9CS_w&usqp=CAU');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .head{
+    margin-left: auto;
+    margin-right: auto;
+  }

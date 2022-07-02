@@ -20,14 +20,15 @@ import { ShowordersComponent } from './admin/showorders/showorders.component';
 import { UserviewbooksComponent } from './user/userviewbooks/userviewbooks.component';
 import { UsersearchbooksComponent } from './user/usersearchbooks/usersearchbooks.component';
 import { UsercartComponent } from './user/usercart/usercart.component';
-
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { UserprofileComponent } from './user/userprofile/userprofile.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'NavBar',component:NavBarComponent},
   {path:'Login',component:LoginComponent},
   {path:'Signup',component:SignupComponent},
   {path:'Admin',component:AdminComponent},
-  {path:'User',component:UserComponent},
+  {path:'User/:id',component:UserComponent},
   {path:'ContactPage',component:ContactpageComponent},
   {path:'Adminlogin',component:AdminloginComponent},
   {path:'Viewbooks',component:ViewBooksComponent},
@@ -41,7 +42,9 @@ const routes: Routes = [
   {path:'ShowOrders',component:ShowordersComponent},
   {path:'Userbooks',component:UserviewbooksComponent},
   {path:'Usersearch',component:UsersearchbooksComponent},
-  {path:'UserCart',component:UsercartComponent}
+  {path:'UserCart',component:UsercartComponent},
+  {path:'Userlogin',component:UserloginComponent},
+  {path:'Profie',component:UserprofileComponent}
 ];
 
 @NgModule({
@@ -49,4 +52,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingcomponents = [NavBarComponent,LoginComponent,SignupComponent]
+export const routingcomponents = [NavBarComponent,LoginComponent,SignupComponent,UserComponent]

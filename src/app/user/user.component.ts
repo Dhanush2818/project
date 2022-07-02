@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { OrderdetailsService } from '../orderdetails.service';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -7,13 +7,18 @@ import { OrderdetailsService } from '../orderdetails.service';
 })
 export class UserComponent implements OnInit {
 
-  constructor(private service:OrderdetailsService) { }
+  constructor(private route:ActivatedRoute) { }
 
   BookData:any;
+  id:any;
 @Input() details:any;
 
   ngOnInit(): void {
-    this.BookData = this.service.BookDetails;
+    this.route.paramMap.subscribe((params)=>{
+      this.id=params.get('id');
+    });
+    console.log('hello'+this.id)
+   
   }
 
 }

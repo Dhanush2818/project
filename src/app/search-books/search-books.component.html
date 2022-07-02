@@ -12,12 +12,13 @@
 </div>
 
 
-<h2>Search For Books Based on  Required BookName and Price</h2>
+<h1 class="head">Browse </h1>
 
-
+<div class="body">
 <table class="table table-striped">
     <thead>
         <tr>
+            <th>Image</th>
             <th>
                 <div class="d-flex flex-row">
                     <input [(ngModel)]="BookNameSearch" class="form-control"
@@ -25,22 +26,31 @@
                 </div>
                 BookName</th>
             <th>BookId</th>
-            <th>Gerner</th>
+            <th>
+                <div class="d-flex flex-row">
+                    <input [(ngModel)]="BookNameSearch" class="form-control"
+                    (keyup)="SearchFn()" placeholder="Gerner">
+                </div>Gerner</th>
             <th>Language</th>
             <th>
                
                 Price</th>
+                
+
         </tr>
 
     </thead>
     <tbody>
         <tr *ngFor="let dataItem of Booklist">
+            <td><img src={{dataItem.Photo}} width="100px"/></td>
             <td>{{dataItem.BookName}}</td>
             <td>{{dataItem.BookId}}</td>
             <td>{{dataItem.Gerner}}</td>
             <td>{{dataItem.Language}}</td>
             <td>{{dataItem.Price}}</td>
+           
         </tr>
     </tbody>
 </table>
+</div>
 <a mat-raised-button class="log" color="primary" routerLink="" >Back</a>

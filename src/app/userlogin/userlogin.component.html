@@ -1,0 +1,59 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">BookHive</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="search-icon">
+          <input type="srch"  name="" placeholder="Search Books">
+          <label class="icon">
+          <span class="fas fa-search"></span>
+          </label>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink=""  >Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/ContactPage" >Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="d-flex flex-row bd-highlight">
+<div class="form-froup row" style="width: 60%;">
+
+
+<div class="input-field">
+<span class="material-icons">
+email
+</span>
+<input type="text" class="form-control" [(ngModel)]="Email" placeholder="Email" >
+
+
+</div>
+
+<div class="input-field">
+
+<span class="material-icons">
+lock
+</span>
+<input type="password" class="form-control" [(ngModel)]="pwd" placeholder="Password" />
+</div>
+</div>
+</div>
+<button (click)="validate()" class="btn btn-primary">
+Login
+</button>
+
+

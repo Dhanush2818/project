@@ -9,6 +9,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { SlickCarouselModule } from 'ngx-slick-carousel'; 
 
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './home/home.component';
@@ -33,6 +34,7 @@ import { UsersearchbooksComponent } from './user/usersearchbooks/usersearchbooks
 import { UsercartComponent } from './user/usercart/usercart.component';
 import { UserprofileComponent } from './user/userprofile/userprofile.component';
 import { DescriptionComponent } from './user/description/description.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +58,7 @@ import { DescriptionComponent } from './user/description/description.component';
     UsercartComponent,
     UserprofileComponent,
     DescriptionComponent,
+    UserloginComponent
     
     
   ],
@@ -72,7 +75,8 @@ import { DescriptionComponent } from './user/description/description.component';
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    SlickCarouselModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent],

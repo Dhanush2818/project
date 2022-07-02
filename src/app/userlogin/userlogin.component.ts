@@ -2,11 +2,11 @@ import { Component, OnInit,Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { SharedService } from 'src/app/shared.service';
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-userlogin',
+  templateUrl: './userlogin.component.html',
+  styleUrls: ['./userlogin.component.css']
 })
-export class LoginComponent implements OnInit {
+export class UserloginComponent implements OnInit {
 
   constructor(private services:SharedService,private route:Router) { }
 
@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   gp:any;
   ra:any;
   k:any;
+  id:any;
   ngOnInit(): void {this.Email=this.bd.Email;
     this.pwd=this.bd.pwd;
     
@@ -44,9 +45,10 @@ export class LoginComponent implements OnInit {
       
       this.ge=this.Userlist.Email;
       this.gp=this.Userlist.pwd;
-      if((this.de==this.ge)&&(this.dp==this.gp))
+      if((this.de==this.ge)&&(this.dp==this.gp)&&(this.de!=null)&&(this.ge!=null))
       {
-        this.route.navigate(['/User']);
+        this.id=this.k.UserEmail;
+        this.route.navigate(['User',this.id]);
         
       }
       else{
@@ -55,4 +57,5 @@ export class LoginComponent implements OnInit {
     });
     
   }
+
 }

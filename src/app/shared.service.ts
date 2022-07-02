@@ -58,4 +58,5 @@ export class SharedService {
     return this.http.get<any>(this.APIUrl+'/UserDetails'+'/'+"'"+val+"'");
   }
 
+
 }
