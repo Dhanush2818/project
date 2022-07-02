@@ -35,6 +35,7 @@ import { UsercartComponent } from './user/usercart/usercart.component';
 import { UserprofileComponent } from './user/userprofile/userprofile.component';
 import { DescriptionComponent } from './user/description/description.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
+import { AdminsbComponent } from './admin/adminsb/adminsb.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +59,8 @@ import { UserloginComponent } from './userlogin/userlogin.component';
     UsercartComponent,
     UserprofileComponent,
     DescriptionComponent,
-    UserloginComponent
+    UserloginComponent,
+    AdminsbComponent
     
     
   ],

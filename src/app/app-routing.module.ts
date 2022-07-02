@@ -22,6 +22,7 @@ import { UsersearchbooksComponent } from './user/usersearchbooks/usersearchbooks
 import { UsercartComponent } from './user/usercart/usercart.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { UserprofileComponent } from './user/userprofile/userprofile.component';
+import { AdminsbComponent } from './admin/adminsb/adminsb.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'NavBar',component:NavBarComponent},
@@ -40,11 +41,12 @@ const routes: Routes = [
   {path:'AddUser',component:AdduserComponent},
   {path:'ShowUser',component:ShowuserComponent},
   {path:'ShowOrders',component:ShowordersComponent},
-  {path:'Userbooks',component:UserviewbooksComponent},
+  {path:'Userbooks/:id',component:UserviewbooksComponent},
   {path:'Usersearch',component:UsersearchbooksComponent},
-  {path:'UserCart',component:UsercartComponent},
+  {path:'UserCart/:id',component:UsercartComponent},
   {path:'Userlogin',component:UserloginComponent},
-  {path:'Profie',component:UserprofileComponent}
+  {path:'Profie',component:UserprofileComponent},
+  {path:'Adminsb',component:AdminsbComponent}
 ];
 
 @NgModule({

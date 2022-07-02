@@ -29,11 +29,11 @@
     </div>
   </div>
 </nav>
-
+<h2 class="title">Sign in</h2>
 <div class="d-flex flex-row bd-highlight">
 <div class="form-froup row" style="width: 60%;">
 
-
+  <div class="container">
 <div class="input-field">
 <span class="material-icons">
 email
@@ -50,10 +50,15 @@ lock
 </span>
 <input type="password" class="form-control" [(ngModel)]="pwd" placeholder="Password" />
 </div>
-</div>
-</div>
+
 <button (click)="validate()" class="btn btn-primary">
 Login
 </button>
+<p>Don't Have a Account?</p>
+<button routerLink="/Signup" class="btn btn-primary">
+  Signup
+  </button>
 
-
+</div>
+</div>
+</div>

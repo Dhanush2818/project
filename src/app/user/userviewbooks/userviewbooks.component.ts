@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { SharedService } from 'src/app/shared.service';
+
 @Component({
   selector: 'app-userviewbooks',
   templateUrl: './userviewbooks.component.html',
@@ -7,19 +9,33 @@ import { SharedService } from 'src/app/shared.service';
 })
 export class UserviewbooksComponent implements OnInit {
 
-  constructor(private services:SharedService) { }
+  constructor(private services:SharedService,private router:ActivatedRoute) { }
+  
   Booklist:any=[];
+  UserList:any=[];
   ModalTitle:string | undefined;
   bd:any;
   n:any;
-  
+  bn:any;
+  bp:any;
+  bq=1;
+  ue:any;
+  ui:any;
+  ua:any;
+  id:any;
   ngOnInit(): void {
     this.refreshBookList();
+    // console.log(this.comp.id);
+    this.router.paramMap.subscribe((params)=>{
+      this.id=params.get('id');
+    });
+    console.log(this.id);
   }
   addClick(val:any){
     
     this.ModalTitle="BookDescription"
   this.n=val
+  console.log(this.n)
   }
   closeClick(){
     this.refreshBookList();
@@ -29,7 +45,37 @@ export class UserviewbooksComponent implements OnInit {
     this.services.getbooks().subscribe(data=>{
         this.Booklist=data;
     });
+
     
-    console.log(this.Booklist);
+    
+}
+addcart(val:any){
+  
+  
+  this.services.getuserbyemail(this.id).subscribe(data=>{
+    this.UserList=data;
+    console.log(this.UserList)
+    for(let m of this.UserList)
+    {
+      this.ue=m.UserEmail;
+      this.ui=m.UserId;
+      this.ua=m.Address;
+    }
+    this.services.addorder(
+      {
+        UserEmail:this.ue,
+        UserId:this.ui,
+        BookName:val.BookName,
+        Price:val.Price,
+        Quantity:this.bq,
+        Address:this.ua
+      }
+    ).subscribe(res=>{
+      alert(res.toString());
+    
+});
+});
+
 }
 }
+

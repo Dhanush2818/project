@@ -27,7 +27,7 @@
             <a class="nav-link" routerLink="/ContactPage" >Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/UserCart" >YourCart</a>
+            <button type="button" (click)="gocart()" class="btn btn-success">Cart</button>
           </li>
           <li class="nav-item">
             <button type="button" class="btn btn-primary float-right m-2" 
@@ -83,8 +83,7 @@ data-backdrop="static" data-keyboard="false"
               </div>
           </div>
       </div>
-      <a routerLink="/Userbooks" class="viewmorebtn">view more <i class="bi bi-arrow-right"></i></a>
-  </div>
+      <button type="button" (click)="gopage()" class="btn btn-success">Success</button>  </div>
 
 
   <div class="img-fluid">

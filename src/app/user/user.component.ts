@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -7,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute,private rtr:Router) { }
 
   BookData:any;
   id:any;
@@ -19,6 +20,14 @@ export class UserComponent implements OnInit {
     });
     console.log('hello'+this.id)
    
+  }
+  gopage(){
+    console.log(this.id)
+    this.rtr.navigate(['Userbooks',this.id]);
+  }
+  gocart(){
+    console.log(this.id)
+    this.rtr.navigate(['UserCart',this.id]);
   }
 
 }

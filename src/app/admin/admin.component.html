@@ -37,64 +37,61 @@
     </div>
   </nav>
   
-  <div class="banner">
-    <div class="content">
-        <h1 class="mb-5">All Books <br/><br/> At One Place.</h1>
-        <a routerLink="/Viewbooks">ORDER NOW <i class="bi bi-arrow-right"></i></a>
-    </div>
+<!--corousel-->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <!-- step  -->
-  <div class="container mt-5 mb-5">
-    <h1 class="text-center"><span class="highlight">How to get your books?</span></h1>
-    <div class="row mt-5">
-        <!-- one  -->
-        <div class="col-lg-4 mt-2">
-            <div class="stepBox">
-                <h1>1</h1>
-                <p>Select books</p>
-            </div>
-        </div>
-  <!-- two -->
-        <div class="col-lg-4 mt-2">
-            <div class="stepBox">
-                <h1>2</h1>
-                <p>Fill the details</p>
-            </div>
-        </div>
-        <!-- three  -->
-        <div class="col-lg-4 mt-2">
-            <div class="stepBox">
-                <h1>3</h1>
-                <p>Books delivered at your doorstep</p>
-            </div>
-        </div>
-    </div>
-  </div>
-  
-  <!-- Bookbox  -->
-  
-  <div class="container mt-4 mb-4">
-      <h1 class="text-center"><span class="highlight">Customers Trending Books</span></h1>
-      <div class="row">
-          <div class="col-lg-3 mt-3" *ngFor="let bd of BookData;index as i">
-              <div class="Bookbox" *ngIf="i<=7">
-                  <img src="{{bd.BookImg}}" />
-                  <h1 style="color:blue;">{{bd.BookName}}</h1>
-                  <p style="color:blue;">{{bd.BookPrice | currency:'INR'}}</p>
-              </div>
-          </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://miro.medium.com/max/1400/1*HY09Xt_KMPnk1CAaSuHX5g.jpeg" width="1000" class="center" height="500" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
       </div>
-      <a routerLink="/Viewbooks" class="viewmorebtn">view more <i class="bi bi-arrow-right"></i></a>
+    </div>
+    <div class="carousel-item">
+      <img src="https://mybayutcdn.bayut.com/mybayut/wp-content/uploads/Where-to-buy-books-online-in-UAE-Cover-06-08.jpg" class="center" width="1000" height="500" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.popoptiq.com/wp-content/uploads/2019/01/Chart-of-all-fiction-genres-jan31.jpg" class="center" width="800" height="500" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
 
   <div class="img-fluid">
     <div  class="center">
     <div class="space"></div>
-            <a mat-button routerLink="/Viewbooks" style="color:blue;" >ViewBooks</a>
-            <a mat-button routerLink="/Searchbooks" style="color:blue;" >SearchBooks</a>
-            <a mat-button routerLink="/Modify" style="color:blue;" >ModifyBooks</a>
-            <a mat-button routerLink="/ShowUser" style="color:blue;" >CustomersDetails</a>
-            <a mat-button routerLink="/ShowOrders" style="color:blue;" >OrderDetails</a>
+    <button type="button" routerLink="/Adminsb" class="btn btn-secondary">Browse Catalog</button>
+            <br>
+            <br>
+            <button routerLink="/Modify" type="button" class="btn btn-warning">ModifyBooks</button>
+            <br>
+            <br>
+            <button routerLink="/ShowUser" type="button" class="btn btn-info">CustomersDetails</button>
+            <br>
+            <br>
+            <button routerLink="/ShowOrders" type="button" class="btn btn-info">OrderDetails</button>
   <div class="container-fluid footer mt-5">
     <div class="row">
         <!-- name  -->
