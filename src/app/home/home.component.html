@@ -8,11 +8,19 @@
     
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <a mat-button routerLink="/Searchbooks" style="color:rgb(61, 235, 226);" >SearchBooks</a>
+       <li class="nav-item">
+          <a mat-button routerLink="/Searchbooks" style="color:rgb(61, 235, 226);" >SearchBooks</a>
+        </li>
+        <li class="nav-item">
         <a mat-button routerLink="/About" style="color:rgb(75, 75, 170);" >About</a>
+        </li>
+        <li class="nav-item">
         <a mat-button routerLink="" style="color:rgb(0, 255, 51);" >Home</a>
+      </li>
+      <li class="nav-item">
         <a mat-button routerLink="/ContactPage" style="color:rgb(194, 177, 19);" >Contact</a>
-        
+      </li>
+      <li class="nav-item">
           <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Login
@@ -32,6 +40,28 @@
     </div>
   </div>
 </div>
+</li>
+<li class="nav-item">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+  Admin
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabe2">Admin Only Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <app-adminlogin></app-adminlogin>
+      </div>
+    </div>
+  </div>
+</div>
+</li>
+<li class="nav-item">
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
   Signup
 </button>
@@ -49,7 +79,7 @@
       </div>
     </div>
   </div>
-</div>
+</div></li>
       </ul>
     </div>
   </div>
@@ -130,25 +160,7 @@
       </div>
       <!-- nav  -->
       <div class="col-lg-4 mt-3 mb-3">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-          Admin
-        </button>
         
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabe2">Admin Only Login</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-               <app-adminlogin></app-adminlogin>
-              </div>
-            </div>
-          </div>
-        </div>
-
         
           <a routerLink="">Home</a>
           

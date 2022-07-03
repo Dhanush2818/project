@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+}
+.bp {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoAYlGALTa38j10QM5c0SIdtCUXaA0aToXOg&usqp=CAU');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }

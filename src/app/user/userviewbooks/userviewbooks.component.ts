@@ -58,7 +58,7 @@ SearchFn(){
     return el.BookName.toString().toLowerCase().includes(
       BookNameSearch.toString().trim().toLowerCase()
     )&& el.Author.toString().toLowerCase().includes(
-      BookNameSearch.toString().trim().toLowerCase()
+      BookAuthorSearch.toString().trim().toLowerCase()
     )
 });
 }

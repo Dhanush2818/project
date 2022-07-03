@@ -1,8 +1,37 @@
-<table class="table table-striped">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">BookHive</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink=""  >Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/ContactPage" >Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<h1>
+  Browse through a vertity of Book
+</h1>
+<div class="bp" >
+<table class="table table-striped" >
     <thead>
         <tr>
-          <th>BookImage</th>
-            <th>
+          <th style="width: 230px;">BookImage</th>
+            <th style="width: 330px;">
               <div class="d-flex flex-row">
                 <input [(ngModel)]="BookNameSearch" class="form-control"
                 (keyup)="SearchFn()" placeholder="BookName">
@@ -10,7 +39,7 @@
               BookName</th>
             <th>BookId</th>
             <th>Gerner</th>
-            <th> <div >
+            <th style="width: 230px;"> <div >
               <input [(ngModel)]="BookAuthorSearch" class="form-control"
                  (keyup)="SearchFn()" placeholder="Author">
             
@@ -51,7 +80,7 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                          <app-description [new]=n>
+                          <app-description [new]="n">
                           </app-description>
                             
                         </div>
@@ -65,9 +94,9 @@
             </td>
             
             <td>{{dataItem.Gerner}}</td>
+            <td>{{dataItem.Author}}</td>
             <td>{{dataItem.Language}}</td>
             <td>{{dataItem.Price}}</td>
-            <td><img src={{dataItem.Photo}} width="100px"/></td>
             <td>
                 
                 <button type="button" class="btn btn-light mr-1"
@@ -81,6 +110,7 @@ data-backdrop="static" data-keyboard="false" (click)="addcart(dataItem)"
         </tr>
     </tbody>
 </table>
+</div>
 <div>
     <a mat-raised-button class="log" color="primary" [routerLink]="['/User',id]" >Back</a>
     </div>

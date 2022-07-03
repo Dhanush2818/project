@@ -1,32 +1,70 @@
-<div><mat-toolbar color="" class="mat-elevation-z11">
-    <span><mat-icon>eco</mat-icon>BookHive</span>
-    <a mat-raised-button class="log"  routerLink="" >Home</a>
-    <p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">BookHive</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
       
-    </p>
-    <a mat-raised-button>About</a>
-    <a mat-raised-button class="log"  routerLink="/ContactPage">Contact</a>
-    <div class="space"></div>
-  </mat-toolbar></div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link" routerLink=""  >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink=""  >Back</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/ContactPage" >Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
+<h1>
+   View Catalog 
+
+</h1>
+
+<div class="body">
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>BookName</th>
+            <th style="width: 230px;">Image</th>
+            <th style="width: 330px;">
+                BookName</th>
             <th>BookId</th>
             <th>Gerner</th>
+            <th style="width: 230px;">
+                Author</th>
+                
             <th>Language</th>
-            <th>Price</th>
+            <th>
+               
+                Price</th>
+                
+
         </tr>
 
     </thead>
     <tbody>
         <tr *ngFor="let dataItem of Booklist">
+            <td><img src={{dataItem.Photo}} width="150px"/></td>
             <td>{{dataItem.BookName}}</td>
             <td>{{dataItem.BookId}}</td>
             <td>{{dataItem.Gerner}}</td>
+            <td>{{dataItem.Author}}</td>
             <td>{{dataItem.Language}}</td>
             <td>{{dataItem.Price}}</td>
+           
         </tr>
     </tbody>
 </table>
+</div>
+<a mat-raised-button class="log" color="primary" routerLink="" >Back</a>
