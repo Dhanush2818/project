@@ -1,3 +1,7 @@
+<br>
+<h1>Modify BookDetails</h1>
+
+
 <button type="button" class="btn btn-primary float-right m-2" 
 data-toggle="modal" data-target="#exampleModal"
 (click)="addClick()"
@@ -26,13 +30,14 @@ data-backdrop="static" data-keyboard="false"
     </div>
   </div>
 
-
+<div class="body">
 <table class="table table-striped">
     <thead>
         <tr>
             <th>BookName</th>
             <th>BookId</th>
             <th>Gerner</th>
+            <th style="width: 230px;">Author</th>
             <th>Language</th>
             <th>Price</th>
             <th>Image</th>
@@ -45,6 +50,7 @@ data-backdrop="static" data-keyboard="false"
             <td>{{dataItem.BookName}}</td>
             <td>{{dataItem.BookId}}</td>
             <td>{{dataItem.Gerner}}</td>
+            <td>{{dataItem.Author}}</td>
             <td>{{dataItem.Language}}</td>
             <td>{{dataItem.Price}}</td>
             <td><img src={{dataItem.Photo}} width="100px"/></td>
@@ -73,6 +79,7 @@ data-backdrop="static" data-keyboard="false"
         </tr>
     </tbody>
 </table>
+</div>
 <div>
 <a mat-raised-button class="log" color="primary" routerLink="/Admin" >Back</a>
 </div>

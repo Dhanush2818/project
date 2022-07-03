@@ -1,18 +1,32 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>BookName</th>
+          <th>BookImage</th>
+            <th>
+              <div class="d-flex flex-row">
+                <input [(ngModel)]="BookNameSearch" class="form-control"
+                (keyup)="SearchFn()" placeholder="BookName">
+            </div>
+              BookName</th>
             <th>BookId</th>
             <th>Gerner</th>
+            <th> <div >
+              <input [(ngModel)]="BookAuthorSearch" class="form-control"
+                 (keyup)="SearchFn()" placeholder="Author">
+            
+         </div>
+              
+              Author</th>
             <th>Language</th>
             <th>Price</th>
-            <th>BookImage</th>
+            
             <th>Options</th>
         </tr>
 
     </thead>
     <tbody>
         <tr *ngFor="let dataItem of Booklist">
+          <td><img src={{dataItem.Photo}} width="100px"/></td>
           <td>{{dataItem.BookName}}</td>
             <td>
                 <button type="button" class="btn btn-primary  m-2" 
@@ -68,5 +82,5 @@ data-backdrop="static" data-keyboard="false" (click)="addcart(dataItem)"
     </tbody>
 </table>
 <div>
-    <a mat-raised-button class="log" color="primary" routerLink="/User" >Back</a>
+    <a mat-raised-button class="log" color="primary" [routerLink]="['/User',id]" >Back</a>
     </div>

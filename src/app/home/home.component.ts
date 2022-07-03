@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderdetailsService } from '../orderdetails.service';
+import { SharedService } from '../shared.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,12 +7,13 @@ import { OrderdetailsService } from '../orderdetails.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private service:OrderdetailsService) { }
+  constructor(private service:SharedService) { }
 
   BookData:any;
 
-  ngOnInit(): void {
-    this.BookData = this.service.BookDetails;
+  ngOnInit(): void { this.service.getbooks().subscribe(data=>{
+    this.BookData=data;
+});
   }
 
 

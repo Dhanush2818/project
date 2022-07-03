@@ -13,7 +13,7 @@ export class AdminsbComponent implements OnInit {
   bd:any;
   
   BookNameSearch:string="";
-  BookPriceSearch:number=0;
+  BookAuthorSearch:string="";
   BookListWithoutSearch:any=[];
   ngOnInit(): void {
     this.refreshBookList();
@@ -26,10 +26,12 @@ export class AdminsbComponent implements OnInit {
 }
   SearchFn(){
     var BookNameSearch=this.BookNameSearch;
-    
+    var BookAuthorSearch=this.BookAuthorSearch
     this.Booklist = this.BookListWithoutSearch.filter(function (el:any){
       return el.BookName.toString().toLowerCase().includes(
         BookNameSearch.toString().trim().toLowerCase()
+      )&& el.Author.toString().toLowerCase().includes(
+        BookAuthorSearch.toString().trim().toLowerCase()
       )
   });
   }

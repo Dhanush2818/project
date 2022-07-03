@@ -10,7 +10,9 @@ import { SharedService } from 'src/app/shared.service';
 export class UserviewbooksComponent implements OnInit {
 
   constructor(private services:SharedService,private router:ActivatedRoute) { }
-  
+  BookNameSearch:string="";
+  BookAuthorSearch:string="";
+  BookListWithoutSearch:any=[];
   Booklist:any=[];
   UserList:any=[];
   ModalTitle:string | undefined;
@@ -48,6 +50,17 @@ export class UserviewbooksComponent implements OnInit {
 
     
     
+}
+SearchFn(){
+  var BookNameSearch=this.BookNameSearch;
+  var BookAuthorSearch=this.BookAuthorSearch;
+  this.Booklist = this.BookListWithoutSearch.filter(function (el:any){
+    return el.BookName.toString().toLowerCase().includes(
+      BookNameSearch.toString().trim().toLowerCase()
+    )&& el.Author.toString().toLowerCase().includes(
+      BookNameSearch.toString().trim().toLowerCase()
+    )
+});
 }
 addcart(val:any){
   

@@ -18,7 +18,7 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Image</th>
+            <th style="width: 230px;">Image</th>
             <th style="width: 330px;">
                 <div class="d-flex flex-row">
                     <input [(ngModel)]="BookNameSearch" class="form-control"
@@ -29,7 +29,7 @@
             <th>Gerner</th>
             <th style="width: 230px;">
                 <div >
-                     <input [(ngModel)]="BookNameSearch" class="form-control"
+                     <input [(ngModel)]="BookAuthorSearch" class="form-control"
                         (keyup)="SearchFn()" placeholder="Author">
                    
                 </div>Author</th>
@@ -45,7 +45,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let dataItem of Booklist">
-            <td><img src={{dataItem.Photo}} width="100px"/></td>
+            <td><img src={{dataItem.Photo}} width="150px"/></td>
             <td>{{dataItem.BookName}}</td>
             <td>{{dataItem.BookId}}</td>
             <td>{{dataItem.Gerner}}</td>

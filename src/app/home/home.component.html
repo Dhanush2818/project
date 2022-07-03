@@ -9,6 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <a mat-button routerLink="/Searchbooks" style="color:rgb(61, 235, 226);" >SearchBooks</a>
+        <a mat-button routerLink="/About" style="color:rgb(75, 75, 170);" >About</a>
         <a mat-button routerLink="" style="color:rgb(0, 255, 51);" >Home</a>
         <a mat-button routerLink="/ContactPage" style="color:rgb(194, 177, 19);" >Contact</a>
         
@@ -49,7 +50,6 @@
     </div>
   </div>
 </div>
-        <a mat-button routerLink="/Adminlogin" style="color:rgb(216, 43, 81);" >Admin</a>
       </ul>
     </div>
   </div>
@@ -98,10 +98,10 @@
 
 
 
-  <div class="content">
+  <!-- <div class="content">
       <h1 class="mb-5">All Books <br/><br/> At One Place.</h1>
       <a routerLink="/Viewbooks">ORDER NOW <i class="bi bi-arrow-right"></i></a>
-  </div>
+  </div> -->
 
 <!-- step  -->
 
@@ -110,14 +110,14 @@
 <div class="container mt-4 mb-4">
     <h1 class="text-center"><span class="highlight">Customers Trending Books</span></h1>
     <div class="row">
-      <!-- 
+      
         <div class="col-lg-3 mt-3" *ngFor="let bd of BookData;index as i">
             <div class="Bookbox" *ngIf="i<=7">
-                <img src="{{bd.BookImg}}" />
+                <img src="{{bd.Photo}}" />
                 <h1 style="color:blue;">{{bd.BookName}}</h1>
-                <p style="color:blue;">{{bd.BookPrice | currency:'INR'}}</p>
+                <p style="color:blue;">{{bd.Price | currency:'INR'}}</p>
             </div>
-        </div> -->
+        </div>
     </div>
     <a routerLink="/Viewbooks" class="viewmorebtn">view more <i class="bi bi-arrow-right"></i></a>
 </div>
@@ -130,6 +130,26 @@
       </div>
       <!-- nav  -->
       <div class="col-lg-4 mt-3 mb-3">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+          Admin
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabe2">Admin Only Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+               <app-adminlogin></app-adminlogin>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
           <a routerLink="">Home</a>
           
           <a routerLink="/About">About</a>

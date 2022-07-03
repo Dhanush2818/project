@@ -36,6 +36,7 @@ import { UserprofileComponent } from './user/userprofile/userprofile.component';
 import { DescriptionComponent } from './user/description/description.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { AdminsbComponent } from './admin/adminsb/adminsb.component';
+import { AboutComponent } from './about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +61,8 @@ import { AdminsbComponent } from './admin/adminsb/adminsb.component';
     UserprofileComponent,
     DescriptionComponent,
     UserloginComponent,
-    AdminsbComponent
+    AdminsbComponent,
+    AboutComponent
     
     
   ],

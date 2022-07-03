@@ -1,4 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 import { Router } from '@angular/router';
 import { SharedService } from 'src/app/shared.service';
 @Component({
@@ -8,43 +10,44 @@ import { SharedService } from 'src/app/shared.service';
 })
 export class UserloginComponent implements OnInit {
 
-  constructor(private services:SharedService,private route:Router) { }
-
+  constructor(private service:SharedService,private route:Router) { }
   Userlist:any=[];
-  UserList:any=[];
-  @Input() bd:any;
-  Email:string | undefined;
-  pwd:string | undefined;
   de:any;
   dp:any;
   ge:any;
   gp:any;
-  ra:any;
   k:any;
   id:any;
-  ngOnInit(): void {this.Email=this.bd.Email;
-    this.pwd=this.bd.pwd;
-    
+  ngOnInit(): void {
   }
-  validate(){
-    var val ={Email:this.Email,
-      pwd:this.pwd,
-    };
-    this.Userlist=val;
-    
-    this.services.getuserbyemail(this.Email).subscribe(data=>{
-      this.UserList=data;
+  registerForm = new FormGroup({
+    Password: new FormControl("",[
+      Validators.required,
+      Validators.minLength(6),
+      Validators.maxLength(15),
+     
+    ]),
+
+
+    UserEmail: new FormControl("",[
+      Validators.required,
+      Validators.email
+    ])
+  });
+  registerSubmited(){
+    this.ge=this.registerForm.value.UserEmail;
+    this.gp=this.registerForm.value.Password;
+    console.log(this.ge);
+    this.service.getuserbyemail(this.ge).subscribe(data=>{
+      this.Userlist=data;
       
      
-      for(let m of this.UserList)
+      for(let m of this.Userlist)
       {
         this.de=m.UserEmail;
         this.dp=m.Password;
         this.k=m;
       }
-      
-      this.ge=this.Userlist.Email;
-      this.gp=this.Userlist.pwd;
       if((this.de==this.ge)&&(this.dp==this.gp)&&(this.de!=null)&&(this.ge!=null))
       {
         this.id=this.k.UserEmail;
@@ -56,6 +59,13 @@ export class UserloginComponent implements OnInit {
       }
     });
     
+  }
+  
+  get password(): FormControl{
+    return this.registerForm.get('Password') as FormControl;
+  }
+  get useremail(): FormControl{
+    return this.registerForm.get('UserEmail') as FormControl;
   }
 
 }

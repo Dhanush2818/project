@@ -57,6 +57,8 @@ export class SharedService {
   getuserbyemail(val:any):Observable<any[]>{
     return this.http.get<any>(this.APIUrl+'/UserDetails'+'/'+"'"+val+"'");
   }
-
+  getadminbyemail(val:any):Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/Admin'+'/'+"'"+val+"'");
+  }
 
 }

@@ -15,7 +15,9 @@ export class AddeditbookComponent implements OnInit {
   BookName:string | undefined;
             BookId:Int16Array | undefined;
             Gerner:string | undefined;
+            Author:string | undefined;
             Language:string | undefined;
+            Description:string | undefined;
             Price:Int16Array | undefined;
             Photo:string | undefined;
            
@@ -26,7 +28,9 @@ export class AddeditbookComponent implements OnInit {
   ngOnInit(): void {this.BookName=this.bd.BookName;
     this.BookId=this.bd.BookId;
     this.Gerner=this.bd.Gerner;
+    this.Author=this.bd.Author;
     this.Language=this.bd.Language;
+    this.Description=this.bd.Description;
     this.Price=this.bd.Price;
     this.Photo=this.bd.Photo;
     
@@ -39,7 +43,9 @@ export class AddeditbookComponent implements OnInit {
     var val ={BookName:this.BookName,
       BookId:this.BookId,
     Gerner:this.Gerner,
+    Author:this.Author,
   Language:this.Language,
+  Description:this.Description,
 Price:this.Price,
 Photo:this.Photo};
     
@@ -54,7 +60,9 @@ Photo:this.Photo};
     var val ={BookName:this.BookName,
       BookId:this.BookId,
     Gerner:this.Gerner,
+    Author:this.Author,
   Language:this.Language,
+  Description:this.Description,
 Price:this.Price,
 Photo:this.Photo};
 
