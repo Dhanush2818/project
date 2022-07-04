@@ -13,7 +13,7 @@ export class SearchBooksComponent implements OnInit {
   bd:any;
   
   BookNameSearch:string="";
-  BookPriceSearch:number=0;
+  BookAuthorSearch:string="";
   BookListWithoutSearch:any=[];
   ngOnInit(): void {
     this.refreshBookList();
@@ -24,13 +24,15 @@ export class SearchBooksComponent implements OnInit {
         this.BookListWithoutSearch=data;
     });
 }
-  SearchFn(){
-    var BookNameSearch=this.BookNameSearch;
-    
-    this.Booklist = this.BookListWithoutSearch.filter(function (el:any){
-      return el.BookName.toString().toLowerCase().includes(
-        BookNameSearch.toString().trim().toLowerCase()
-      )
-  });
-  }
+SearchFn(){
+  var BookNameSearch=this.BookNameSearch;
+  var BookAuthorSearch=this.BookAuthorSearch;
+  this.Booklist = this.BookListWithoutSearch.filter(function (el:any){
+    return el.BookName.toString().toLowerCase().includes(
+      BookNameSearch.toString().trim().toLowerCase()
+    )&& el.Author.toString().toLowerCase().includes(
+      BookAuthorSearch.toString().trim().toLowerCase()
+    )
+});
+}
 }

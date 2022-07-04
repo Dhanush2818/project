@@ -46,8 +46,8 @@ export class UserviewbooksComponent implements OnInit {
   refreshBookList(){
     this.services.getbooks().subscribe(data=>{
         this.Booklist=data;
+        this.BookListWithoutSearch=data;
     });
-
     
     
 }

@@ -1,46 +1,28 @@
-<div class="d-flex flex-row bd-highlight mb-5" *ngFor="let dataItem of Booklist">
-
-    <div class="form-froup row" style="width: 60%;">
-        <label class="col-sm-2 col-form-label">BookName</label>
-        <div class="col-sm-10">
+<div class="row" *ngFor="let dataItem of Booklist" >
+<div  class="col-md-6" >
+    <div >
+        <div>
+            <label ><b>BookName :</b></label>
             {{dataItem.BookName}}
-        </div>
-        <label class="col-sm-2 col-form-label">BookId</label>
-        <div class="col-sm-10">
-            
-            {{dataItem.BookId}}
-        </div>
-        <div class="col-sm-10">
-            <label class="col-sm-2 col-form-label">Gerner</label>
-            {{dataItem.Gerner}}
-    </div>
-    <label class="col-sm-2 col-form-label">BookId</label>
-        <div class="col-sm-10">
-            
+        <div >
+            <label ><b>Author  :</b></label>
             {{dataItem.Author}}
         </div>
-
-
-        <div class="col-sm-10">
-            <label class="col-sm-2 col-form-label">Language</label>
-            {{dataItem.Language}}
+        <div class="col-sm-5">
+            <label><mark><b>Description</b></mark></label>
+            <br><em>
+            {{dataItem.Description}}</em>
         </div>
-        <label class="col-sm-2 col-form-label">BookId</label>
-        <div class="col-sm-10">
-            
-            {{dataItem.Description}}
-        </div>
-        <div class="col-sm-10">
-            <label class="col-sm-2 col-form-label">Price</label>
+        <br>
+        <div >
+            <label ><b>Price :</b></label>  
             {{dataItem.Price}}
-       
     </div>
-    <button   class="btn btn-primary">
-        Add To Cart
-    </button>
-
 </div>
-<div class="col-sm-10">
-    <img src={{dataItem.Photo}} width="100px"/>
+</div>
+</div>
+<div class="col-md-6">
+    <img src={{dataItem.Photo}} width="200px"/>
+</div>
 </div>
 
